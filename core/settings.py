@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'storages',
     # Custom Auth Model
     'users',
     # Blog App
@@ -146,6 +146,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Production Static files
-DEFAULT_FILE_STORAGE = 'core.storage_backends.MediaStorage'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 DATA_UPLOAD_MAX_MEMORY_SIZE = 524288000
