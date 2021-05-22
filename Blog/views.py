@@ -71,8 +71,13 @@ def BlogView(request,slug):
         blog = models.Blog.objects.filter(slug=slug)
         if blog.exists():
             blog = blog[0]
+        if blog.user == request.user:
+            admin = True
+        else:
+            admin = False
         return render(request,'blog.html',{
-            'blog':blog
+            'blog':blog,
+            'is_admin':admin
         })
     else:
         # for post request of comments
