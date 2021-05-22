@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% block content %}
+      <div class="section layout_padding">
+         <div class="container">
+
+            {% for blg in blogs.all %}
+            <a href="{{blg.get_abs_url}}">
+                <div class="row margin_top_30">
+                   <div class="col-md-6">
+                      <img src="{{blg.Image1.url}}" alt="#" height="300" width="100%"/>
+                   </div>
+                   <div class="col-md-6">
+                      <div class="full blog_cont">
+                         <h4>{{blg.Name}}</h4>
+                         <h5>{{blg.Date}}</h5>
+                         <p>{{blg.Paragraph1}}</p>
+                      </div>
+                   </div>
+                </div>
+               </a>
+             {% empty %}
+             <h4>No results found !</h4>
+            {% endfor %}
+         </div>
+      </div>
+      <!-- end section -->
+{% endblock %}
