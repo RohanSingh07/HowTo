@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-unlkc5@y8^dltpkt6r4n&%8vu!xr(!j=mq6se=97_r29#y-dx2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['howblog.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -143,4 +143,3 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
