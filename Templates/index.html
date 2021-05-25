@@ -29,7 +29,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
    </head>
    <!-- body -->
-   <body class="main-layout">
+   <body class="main-layout ">
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="" /></div>
@@ -104,10 +104,10 @@
             </div>
             <hr>
             {% for blg in blogs %}
-            <a href="{{blg.get_abs_url}}">
+            <a href="{{blg.get_abs_url}}" >
             <div class="row pt-2" >
                <div class="col-md-6" >
-                  <img src="{{blg.Image1.url}}" alt="#"  style="object-fit:fill;"/>
+                  <img src="{{blg.Image1.url}}" alt="#"  style="height:300px"/>
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
