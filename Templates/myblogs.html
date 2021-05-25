@@ -27,11 +27,12 @@
 
       <div class="section layout_padding">
          <div class="container">
+            <hr>
             {% for blg in blogs.all %}
             <a href="{{blg.get_abs_url}}">
             <div class="row margin_top_30">
                <div class="col-md-6">
-                  <img src="{{blg.Image1.url}}" alt="#" height="300" width="100%"/>
+                  <img src="{{blg.Image1.url}}" alt="#" style="object-fit:fill;"/>
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
@@ -42,6 +43,7 @@
                </div>
             </div>
                </a>
+            <hr>
             {% endfor %}
          </div>
       </div>

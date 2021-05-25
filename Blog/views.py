@@ -41,7 +41,7 @@ def AddBlog(request):
             Image3 = form.files.get('Image3')
             Paragraph3 = form.cleaned_data.get('Paragraph3')
             video = form.files.get('Video')
-            Mode = form.files.get('Mode')
+            Mode = form.cleaned_data.get('Mode')
             slug = request.user.username+'-Blogs-'+datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
             NewBlog = models.Blog(
                 user = request.user,

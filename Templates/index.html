@@ -93,8 +93,8 @@
       </form>
 
       <!-- section -->
-      <div class="section layout_padding">
-         <div class="container">
+      <div class="section layout_padding h-100">
+         <div class="container h-100">
             <div class="row">
                <div class="col-md-12">
                   <div class="heading">
@@ -102,11 +102,12 @@
                   </div>
                </div>
             </div>
+            <hr>
             {% for blg in blogs %}
             <a href="{{blg.get_abs_url}}">
-            <div class="row pt-2">
-               <div class="col-md-6">
-                  <img src="{{blg.Image1.url}}" alt="#" height="300" width="700"/>
+            <div class="row pt-2" >
+               <div class="col-md-6" >
+                  <img src="{{blg.Image1.url}}" alt="#"  style="object-fit:fill;"/>
                </div>
                <div class="col-md-6">
                   <div class="full blog_cont">
@@ -116,6 +117,7 @@
                </div>
             </div>
                </a>
+            <hr>
             {% endfor %}
 
          </div>
