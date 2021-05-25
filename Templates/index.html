@@ -84,11 +84,11 @@
       </header>
       <!-- end header -->
       {% block content %}
-      {% if request.user.is_authenticated %}
+
       <form method="GET" action="{% url 'Blog:SearchBlog' %}">
          <div class="row d-flex justify-content-center mt-1 mb-1">
-            <input type="text" name="Search" placeholder="Search for Blogs" class="col-8 form-control">
-            <button class="form-control col-1 bg-primary text-white" type="submit">Search</button>
+            <input type="text" name="Search" placeholder="Search for Blogs" class="col-8 form-control" style="border-radius:0;">
+            <button class="form-control col-1 bg-primary text-white" type="submit" style="border-radius:0;">Search</button>
          </div>
       </form>
 
@@ -121,7 +121,7 @@
          </div>
       </div>
       <!-- end section -->
-      {% endif %}
+
       {% endblock %}
 
       <!-- Javascript files-->

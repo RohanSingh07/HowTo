@@ -161,7 +161,7 @@ def EditBlog(request,slug):
 # For searching blogs using the username
 def SearchBlog(request):
      Search = request.GET['Search']
-     blogs = models.Blog.objects.filter(user__username = Search,Mode = 'Public')
+     blogs = models.Blog.objects.filter(Name__contains= Search,Mode = 'Public')
      return render(request,'SearchPage.html',{
          'blogs':blogs
      })
